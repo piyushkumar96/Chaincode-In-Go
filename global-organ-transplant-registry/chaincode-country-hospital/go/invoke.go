@@ -1,7 +1,6 @@
 package main
 
 import (
-    "bytes"
     "strconv"
     "strings"
     "github.com/hyperledger/fabric/core/chaincode/shim"

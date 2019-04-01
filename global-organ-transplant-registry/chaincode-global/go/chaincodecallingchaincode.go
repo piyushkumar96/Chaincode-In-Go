@@ -4,7 +4,6 @@ package main
 import (
     
 	"encoding/json"
-	"bytes"
     "fmt"
     "strconv"
     "github.com/hyperledger/fabric/core/chaincode/shim"
