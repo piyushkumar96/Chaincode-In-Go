@@ -21,14 +21,14 @@ func (r *RMAChaincode) createTicket(stub shim.ChaincodeStubInterface, args []str
     var rmaNo = args[0]
 
     _, err := stub.GetState(rmaNo)
-    if err != nil {
+    if err == nil {
         return shim.Error("@@@@@@@@@@@@@@@@@@@ Ticket No already exists @@@@@@@@@@@@@@@@@@@")                        
     }
         
     RMAInfo := `{ "rmaNo" : "` + rmaNo  + `" ,
                     "messages" : [
                                     { "type" : "3b11" , "message" : "" , "receiveddate":"" } ,
-                                    { "type" : "3bsir" , "message" : "" , "receiveddate":"" },
+                                    { "type" : "3b3sir" , "message" : "" , "receiveddate":"" },
                                     { "type" : "3b3eta" , "message" : "" , "receiveddate":"" },
                                     { "type" : "3b13" , "message" : "" , "receiveddate":"" },
                                     { "type" : "3b3pod" , "message" : "" , "receiveddate":"" }
